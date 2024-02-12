@@ -1,13 +1,14 @@
 import json
+
 def read_data(file_path: str)->dict:
     """
-    This function will read the json file and return the data as a dictionary.
-    
+    Get the total number of messages.
+
     Parameters:
-        file_path (str): Path of the file to be read
+        data (dict): Dictionary containing the data of the json file.
     Returns:
-        dict: Dictionary containing the data of the json file.
+        int: Total number of messages.
     
     """
-    #open file
-    return
+    f=open(file_path , encoding='utf-8').read()
+    return json.loads(f)['messages']
